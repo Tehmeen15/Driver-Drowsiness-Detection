@@ -35,6 +35,7 @@ Extract the file and place it in your working directory.
 4. **Replace path placeholders in the script:**
 
 -```"Add your folder path/iphone_alarm.mp3"```
+
 -```"Add your folder path/shape_predictor_68_face_landmarks.dat"```
 
 ## 🚀 Usage
