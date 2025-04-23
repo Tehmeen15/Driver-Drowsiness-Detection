@@ -7,7 +7,7 @@ import pygame
 
 # Initialize pygame mixer for sound alert
 pygame.mixer.init()
-pygame.mixer.music.load(r"C:\Users\tehme\Downloads\Ai Virtual projects\driver drowsiness\iphone_alarm.mp3")  # Ensure you have an alarm sound file
+pygame.mixer.music.load(r"Add your folder path/iphone_alarm.mp3")  # Replace with your alarm sound path
 
 def play_alarm():
     pygame.mixer.music.play()
@@ -21,7 +21,7 @@ def eye_aspect_ratio(eye):
 
 # Load the face detector and facial landmarks predictor
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor(r"C:\Users\tehme\Downloads\Ai Virtual projects\driver drowsiness\shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor(r"Add your folder path/shape_predictor_68_face_landmarks.dat")  # Replace with your predictor path
 
 (lStart, lEnd) = (42, 48)  # Left eye landmarks
 (rStart, rEnd) = (36, 42)  # Right eye landmarks
@@ -36,7 +36,6 @@ def draw_eye_contours(frame, eye):
 
 cap = cv2.VideoCapture(0)
 drowsy_start_time = None
-
 drowsy_alert_triggered = False
 
 while True:
@@ -59,7 +58,6 @@ while True:
         
         avg_EAR = (left_EAR + right_EAR) / 2.0
         
-        # Draw eyes with better visualization
         draw_eye_contours(frame, left_eye)
         draw_eye_contours(frame, right_eye)
         
